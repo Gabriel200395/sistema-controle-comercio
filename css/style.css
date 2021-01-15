@@ -61,13 +61,14 @@
 .titulo {
   text-align: center;
   font-weight: bold;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(44, 43, 43);
-  margin-left: 300px;
+  margin-left: 378px;
 }
 
 #res {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }

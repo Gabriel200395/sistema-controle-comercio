@@ -9,7 +9,17 @@
   <body>
     <div id="nav">
       <h2 class="titulo">Sistema de compras de uma Frutaria.</h2>
-      <button id="pedidos">Pedidos</button>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <button id="pedidos">Pedidos</button>
+        <div id="res"></div>
+      </div>
     </div>
     <div class="tabela-frutas">
       <table id="tabela" cellpadding="15px"></table>
@@ -29,7 +39,6 @@
       <button onclick="finalizarPedido(controleEstoqueFrutas)">
         Finalizar Pedido
       </button>
-      <div id="res"></div>
     </div>
     <script src="./js/index.js"></script>
   </body>
