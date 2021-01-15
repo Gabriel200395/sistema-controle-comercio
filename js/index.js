@@ -82,24 +82,32 @@ function addPrecoArray(numero, quantidade, total) {
       quantidadeFrutas: quantidade,
       valorPg: total,
     });
-    document.getElementById("number").value = "";
-    document.getElementById("quantidade").value = "";
   }
 }
 
-let pessoas = 0;
+let compras = 0;
 
 function finalizarPedido(array) {
   let total = 0;
-  for (pos in array) {
-    total += array[pos].valorPg;
+
+  if (
+    document.getElementById("number").value == "" ||
+    document.getElementById("quantidade").value == ""
+  ) {
+    alert("compra nao finalizada!");
+  } else {
+    for (pos in array) {
+      total += array[pos].valorPg;
+    }
+    compras += 1;
+    mostrarValorFinal(total);
+
+    let quantidadeCompras = document.getElementById("clientes");
+    quantidadeCompras.innerHTML = `${compras} - compra foi finalizada`;
   }
 
-  pessoas += 1;
-  mostrarValorFinal(total);
-
-  let quantidadePessoas = document.getElementById("clientes");
-  quantidadePessoas.innerHTML = `  ${pessoas} - compra foi finalizada`;
+  document.getElementById("number").value = "";
+  document.getElementById("quantidade").value = "";
 
   return array;
 }
