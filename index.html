@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sistema de compras frutaria</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <h2 class="titulo">Sistema de compras de uma Frutaria.</h2>
+      <button id="pedidos">Pedidos</button>
+    </div>
+    <div class="tabela-frutas">
+      <table id="tabela" cellpadding="15px"></table>
+    </div>
+    <div id="formulario">
+      <input
+        type=" "
+        placeholder="informe a fruta de acordo com a tabela"
+        id="number"
+      />
+      <input
+        type="number"
+        placeholder="informe a quantidade de frutas"
+        id="quantidade"
+      />
+      <button onclick="pedidoCliente()">Fazer Comprar</button>
+      <button onclick="finalizarPedido(controleEstoqueFrutas)">
+        Finalizar Pedido
+      </button>
+      <div id="res"></div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
