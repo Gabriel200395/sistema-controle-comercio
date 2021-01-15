@@ -8,7 +8,7 @@ let tabelaDepreços = [
 
 let controleEstoqueFrutas = [];
 
-//criando tabela de preço
+//criando tabela de frutas
 function tabelaPrecos(array) {
   for (pos in array) return tabelaElemento(array[pos]);
 }
@@ -47,6 +47,7 @@ function pedidoCliente() {
   validarInputs(numero, quantidade);
 }
 
+//validar os campos
 function validarInputs(numero, quantidade) {
   if (numero == "" || quantidade == "") {
     alert("Não tem como fazer comprar!");
@@ -55,6 +56,7 @@ function validarInputs(numero, quantidade) {
   }
 }
 
+//calcular os preços
 function calcularPreco(numero, quantidade) {
   let total = 0;
   for (i = 0, array = tabelaDepreços.length; i < array; i++) {
@@ -73,6 +75,7 @@ function calcularPreco(numero, quantidade) {
   return addPrecoArray(numero, quantidade, total);
 }
 
+//adicionar array
 function addPrecoArray(numero, quantidade, total) {
   if (numero > 5) {
     alert("Olá amigo não temos ainda essa fruta!");
@@ -87,14 +90,14 @@ function addPrecoArray(numero, quantidade, total) {
 
 let compras = 0;
 
+//finalizar o pedido
 function finalizarPedido(array) {
   let total = 0;
-
   if (
     document.getElementById("number").value == "" ||
     document.getElementById("quantidade").value == ""
   ) {
-    alert("compra nao finalizada!");
+    alert("Você não comprou nenhum produto!");
   } else {
     for (pos in array) {
       total += array[pos].valorPg;
@@ -112,6 +115,7 @@ function finalizarPedido(array) {
   return array;
 }
 
+//mostrar o valor final
 function mostrarValorFinal(total) {
   let resposta = document.getElementById("res");
   resposta.innerHTML = `Valor final para o pagamento: ${total.toLocaleString(
