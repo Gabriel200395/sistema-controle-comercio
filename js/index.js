@@ -1,9 +1,9 @@
 let tabelaDepreços = [
-  { posicao: 1, fruta: "maçā", preco: 1.5 },
-  { posicao: 2, fruta: "banana", preco: 1.6 },
-  { posicao: 3, fruta: "melancia", preco: 5.3 },
-  { posicao: 4, fruta: "pera", preco: 1.2 },
-  { posicao: 5, fruta: "laranja", preco: 1.0 },
+  { posicao: 1, fruta: "Maçā", preco: 1.5 },
+  { posicao: 2, fruta: "Banana", preco: 1.6 },
+  { posicao: 3, fruta: "Melancia", preco: 5.3 },
+  { posicao: 4, fruta: "Pera", preco: 1.2 },
+  { posicao: 5, fruta: "Laranja", preco: 1.0 },
 ];
 
 let controleEstoqueFrutas = [];
@@ -87,7 +87,7 @@ function addPrecoArray(numero, quantidade, total) {
   }
 }
 
-let pedidos = 0;
+let pessoas = 0;
 
 function finalizarPedido(array) {
   let total = 0;
@@ -95,11 +95,11 @@ function finalizarPedido(array) {
     total += array[pos].valorPg;
   }
 
-  pedidos += 1;
+  pessoas += 1;
   mostrarValorFinal(total);
 
-  let quantidadePedidos = document.getElementById("pedidos");
-  quantidadePedidos.innerHTML = `qnt de pedidos : ${pedidos}`;
+  let quantidadePessoas = document.getElementById("clientes");
+  quantidadePessoas.innerHTML = `  ${pessoas} - compra foi finalizada`;
 
   return array;
 }
