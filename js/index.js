@@ -97,7 +97,7 @@ function finalizarPedido(array) {
     document.getElementById("number").value == "" ||
     document.getElementById("quantidade").value == ""
   ) {
-    alert("Você não comprou nenhum produto!");
+    alert("Você não comprou nenhum fruta!");
   } else {
     for (pos in array) {
       total += array[pos].valorPg;
