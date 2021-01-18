@@ -86,6 +86,9 @@ function addPrecoArray(numero, quantidade, total) {
       valorPg: total,
     });
   }
+
+  document.getElementById("number").value = "";
+  document.getElementById("quantidade").value = "";
 }
 
 let compras = 0;
@@ -93,10 +96,7 @@ let compras = 0;
 //finalizar o pedido
 function finalizarPedido(array) {
   let total = 0;
-  if (
-    document.getElementById("number").value == "" ||
-    document.getElementById("quantidade").value == ""
-  ) {
+  if (array.length == 0) {
     alert("Você não comprou nenhum fruta!");
   } else {
     for (pos in array) {
@@ -108,9 +108,6 @@ function finalizarPedido(array) {
     let quantidadeCompras = document.getElementById("clientes");
     quantidadeCompras.innerHTML = `${compras} - compra foi finalizada`;
   }
-
-  document.getElementById("number").value = "";
-  document.getElementById("quantidade").value = "";
 
   return array;
 }
